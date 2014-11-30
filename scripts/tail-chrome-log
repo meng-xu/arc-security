@@ -1,0 +1,1 @@
+tail -f ~/Library/Application\ Support/Google/Chrome\ Canary/chrome_debug.log

@@ -1,0 +1,18 @@
+#!/bin/bash
+. "$(dirname $0)/settings.sh" || die "Unable to load settings.sh"
+
+usage=$(
+cat << EOF
+Usage: $0 [PROJ_NAME]
+EOF
+)
+
+if [ $# == 0 ] ; then
+	echo "$usage"
+else
+	if [ -e "$APP_SRC_DIR/$1/bin/$1-debug.apk" ] ; then
+		$RPKG_SCRIPT "$APP_SRC_DIR/$1/bin/$1-debug.apk" "$APP_ARC_DIR"
+	else
+		echo "Project $1 does not exist"
+	fi
+fi

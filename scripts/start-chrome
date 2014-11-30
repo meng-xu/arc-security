@@ -1,0 +1,3 @@
+/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary --enable-logging --allow-nacl-socket-api=localhost --v=1
+
+tail -f ~/Library/Application\ Support/Google/Chrome\ Canary/chrome_debug.log
