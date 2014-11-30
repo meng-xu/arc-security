@@ -1,0 +1,3 @@
+[submodule "chromeos-apk"]
+	path = chromeos-apk
+	url = git@github.com:meng-xu/chromeos-apk.git
