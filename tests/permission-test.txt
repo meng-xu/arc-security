@@ -1,0 +1,5 @@
+1. Build TestPermission under app/src/TestPermission with ant debug
+2. Repackage it with proj2arc TestPermission
+3. Load it as a Chrome Extension
+4. Toggle <uses-permission android:name="android.permission.INTERNET" /> in manifest file
+5. Repeat 1-3
