@@ -1,0 +1,12 @@
+#!/bin/bash
+
+APP_FS=~/Library/Application\ Support/Google/Chrome\ Canary/Default/Storage/ext/nbcloojlehinmibfobeplalbkmccdagf/def/File\ System
+
+CURRENT_DIR=$(dirname $0)
+
+SECRET="my-privacy"
+NEW_SECRET="not-anymore"
+
+cd "$APP_FS"
+grep -rl "$SECRET" ./ | sort | uniq | xargs perl -e "s/$SECRET/$NEW_SECRET/" -pi
+cd "$CURRENT_DIR"
